@@ -104,11 +104,8 @@
                                         <input type="text" class="form-control" id="link" placeholder="link...">
                                     </div>
                         </div>
-                    </form>
                     </div>
 
-
-                    <form class="form-horizontal">
                         <div class="col-md-5">
                             <div class="form-group">
                                 <h2>Gebruikers selecteren</h2><br>
