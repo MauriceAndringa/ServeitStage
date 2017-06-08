@@ -62,7 +62,7 @@
                 <div class="container">
                     <br><br>
                     <center>
-                    <a href="/send"><img src='/send.png' alt="Send" width="30%" height="30%"><h2>Notificatie versturen</h2></a>
+                    <a href="/send" style="color:#eeeeee;"><img src='/send.png' alt="Send" width="30%" height="30%"><h2 style="color:white;">Notificatie versturen</h2></a>
                     <br></center>
                 </div>
             </div>
