@@ -66,42 +66,45 @@
                 <div class="container">
                     <div class="row">
                     <br><br>
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="POST" action="/posts">
+
+                        {{ csrf_field() }}
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h2>Notificatie</h2><br>
                                 <label class="col-sm-2">Titel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="titel" placeholder="Uw titel hier">
+                                        <input type="text" class="form-control" id="title" name="title" placeholder="Uw titel hier" required>
                                     </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Inhoud</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" rows="4" id="message" placeholder="Uw bericht hier"></textarea>
+                                        <textarea class="form-control" rows="4" id="body" name="body" placeholder="Uw bericht hier" required></textarea>
                                     </div> 
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Opties</label>
                                     <div class="col-sm-10">
-                                        <label class="switch"><input type="checkbox"><div class="slider round"></div></label>
+                                        <label class="switch"><input type="checkbox" id="opt_vibrate" name="opt_vibrate"><div class="slider round"></div></label>
                                         <label><h4>&nbsp;Trillen</h4></label>
                                     </div>
                                 <label class="col-sm-2"></label>
                                     <div class="col-sm-10">
-                                        <label class="switch"><input type="checkbox"><div class="slider round"></div></label>
+                                        <label class="switch"><input type="checkbox" id="opt_sound" name="opt_sound"><div class="slider round"></div></label>
                                         <label><h4>&nbsp;Geluid</h4></label>
                                     </div>
                                 <label class="col-sm-2"></label>
                                     <div class="col-sm-10">
-                                        <label class="switch"><input type="checkbox"><div class="slider round"></div></label>
+                                        <label class="switch"><input type="checkbox" id="opt_led" name="opt_led"><div class="slider round"></div></label>
                                         <label><h4>&nbsp;LED</h4></label>
                                     </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Custom Link</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="link" placeholder="link...">
+                                        <input type="text" class="form-control" id="custom_link" name="custom_link" placeholder="link...">
                                     </div>
                         </div>
                     </div>
@@ -114,41 +117,34 @@
                                     </div>
                                 <label class="col-sm-2">Zoeken...</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" id="searchvalue" placeholder="Zoeken...">
+                                        <input type="text" class="form-control" id="searchvalue" name="searchvalue" placeholder="Zoeken...">
                                     </div>
                                     
                             </div>
                             <div class="form-group">
                                  <div class="col-sm-5">
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Invallers</label>
+                                        <label><input type="checkbox" value="" name="gr_invallers" id="gr_invallers">Invallers</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Directeuren</label>
+                                        <label><input type="checkbox" value="" name="gr_directeuren" id="gr_directeuren">Directeuren</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Beheerders</label>
+                                        <label><input type="checkbox" value="" name="gr_beheerders" id="gr_beheerders">Beheerders</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-7">
-                                    <div class="scrollable">
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                        <input type="checkbox" /> This is checkbox <br />
-                                    </div><br>
-                                    
+                                        <select multiple="multiple" name="users[]">
+                                            <option value="1">APA91bGrHkOwusVsXqpyDZKz0O2VL_OwYXjOj4uj88Q5nUNlST1JGCgUmfz-zJpMBK04QquP_C0jHoJyYUIvglxfJS7kvzbcMtzxBk2aHybYtRIF5nzr4_3pOnq-Lty8SyY-CgsLS86S</option>
+                                            <option value="2">Naam van persoon</option>
+                                            <option value="3">Naam van persoon</option>
+                                            <option value="4">Naam van persoon</option>
+                                            <option value="5">Naam van persoon</option>
+                                        </select>
+
                                      <button type="submit" class="btn btn-default">Submit</button>
                                 </div>
-
-                               
-                                    
+                            </div>
                         </div>
                     </form>
                     </div>  

@@ -18,6 +18,8 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" type="text/css" href='/css/style.css'>
+
         
     </head>
     <body style="background-color: #5b6161; font-family: Source Sans Pro, sans-serif">
@@ -62,7 +64,7 @@
                 <div class="container">
                     <br><br>
                     <center>
-                    <a href="/send"><img src='/send.png' alt="Send" width="30%" height="30%"><h2>Notificatie versturen</h2></a>
+                    <a href="/send"><img src='/send.png' alt="Send" width="30%" height="30%"><h2 style="color:white;">Notificatie versturen</h2></a>
                     <br></center>
                 </div>
             </div>

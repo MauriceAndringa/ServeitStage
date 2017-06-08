@@ -22,3 +22,5 @@ Route::get('start', function(){
 Route::get('send', function(){
 	return view('send');
 });
+
+Route::post('/posts', 'PostController@send');

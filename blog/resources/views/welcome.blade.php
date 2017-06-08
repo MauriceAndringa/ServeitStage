@@ -59,6 +59,7 @@
                     <br>
 
                     <div class="row">
+
                         <div class="col-md-6 form-group">
                             <label for="inputEmail">E-mailadres</label>
                             <input type="email" class="form-control" id="inputEmail" placeholder="Email">
@@ -66,11 +67,13 @@
                             <input type="checkbox"> Bewaar inloggegevens
                             </label>
                         </div>
+
                         <div class="col-md-6 form-group">
                             <label for="inputPassword">Wachtwoord</label>
                             <input type="password" class="form-control" id="inputPassword" placeholder="Wachtwoord">
                             <label class="pull-right"><u>Wachtwoord vergeten?</u></label>
                         </div>
+
                     </div>
 
                     <div class="row">
