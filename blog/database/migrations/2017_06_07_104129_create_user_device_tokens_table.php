@@ -18,11 +18,10 @@ class CreateUserDeviceTokensTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('platform');
-            $table->string('device_id');
             $table->string('device_token')->unique('device_token');
             $table->timestamps();
 
-            $table->unique(array('platform', 'device_id'));
+            $table->unique(array('user_id', 'platform', 'device_token'));
 
         });
     }
