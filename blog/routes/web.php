@@ -23,4 +23,4 @@ Route::get('send', function(){
 	return view('send');
 });
 
-Route::post('/posts', 'PostController@send');
+Route::post('form', 'PostController@send');

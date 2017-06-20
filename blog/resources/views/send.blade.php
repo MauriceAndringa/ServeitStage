@@ -66,7 +66,7 @@
                 <div class="container">
                     <div class="row">
                     <br><br>
-                    <form class="form-horizontal" method="POST" action="/posts">
+                    <form class="form-horizontal" method="POST" action="/form">
 
                         {{ csrf_field() }}
 
