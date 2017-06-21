@@ -30,13 +30,24 @@ class PostController extends Controller
 
         //dd(request()->all());
 
+        //TODO in .env zetten
         //creating a new hub
         $hub = new NotificationHub("Endpoint=sb://invallersonline.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=/e+HVuDzuVejH8XgL+EVr11Od95j408CLmu7vFDML+Q=", "InvallersOnline");
 
         //Sending to IOS
         if($blnIOS) {
-            $alert = '{"aps":{"alert":"Hello from PHP!"}}';
-            $notification = new Notification("apple", $alert);
+            //$alert = '{"aps":{"alert":"Hello from PHP!"}}';
+
+            $alert = [
+                'aps' => [
+                    'alert'=>[
+                        'body'=>$body,
+                        'title'=>$title
+                    ],
+                ]
+            ];
+
+            $notification = new Notification("apple", json_encode($alert));
             $hub->sendNotification($notification, null);
         }
 
@@ -50,7 +61,8 @@ class PostController extends Controller
                         'title'=>$title,
                         'message'=>$body,
                         'vibrate'=>$optVibrate,
-                        'sound'=>$optSound
+                        'sound'=>$optSound,
+                        'lights'=>$optLED
                 ],
 
             ];
